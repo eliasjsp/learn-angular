@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" charset="UTF-8">
+    <title>Whitewater Adventures</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="css-libs/bootstrap.min.css" rel="stylesheet" />
     <link href="css-libs/font-awesome.min.css" rel="stylesheet" />
@@ -13,6 +13,10 @@
     <script src="js-libs/angular.min.js"></script>
 
     <script src="ext-modules/psMenu/psMenuModule.js"></script>
+    <script src="ext-modules/psMenu/psMenuController.js"></script>
+    <script src="ext-modules/psMenu/psMenuDirective.js"></script>
+
+
     <script src="ext-modules/psDashboard/psDashboardModule.js"></script>
     <script src="ext-modules/psFramework/psFrameworkModule.js"></script>
     <script src="ext-modules/psFramework/psFrameworkDirective.js"></script>
@@ -20,7 +24,16 @@
 
     <script src="app/appModule.js"></script>
 </head>
+
 <body class="container-fluid">
-    <ps-framework></ps-framework>
+<ps-framework title="Whitewater Adventures"
+                  subtitle="Administrative Application"
+                  icon-file="images/kayak-icon-flat.png">
+        <ps-menu>
+            <ps-menu-item label="Dashboard"></ps-menu-item>
+            <ps-menu-item label="Locations"></ps-menu-item>
+            <ps-menu-item label="Raft Guides"></ps-menu-item>
+        </ps-menu>
+    </ps-framework>
 </body>
 </html>
