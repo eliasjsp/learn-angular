@@ -3,4 +3,4 @@
  */
 "use strict";
 
-angular.module("app", ["psFramework"]);
+angular.module("app", ["psFramework", "ngRoute"]);
