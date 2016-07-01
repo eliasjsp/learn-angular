@@ -3,4 +3,4 @@
  */
 "use strict";
 
-angular.module("app", ["psFramework", "ngRoute"]);
+angular.module("app", ["psFramework", "ngRoute", "ngStorage"]);

@@ -10,6 +10,7 @@ angular.module('app').directive('wwaTemperature',
                 scope.hasError = false;
                 scope.selectedLocation = null;
                 scope.loadLocation = function () {
+                    scope.hasError = false;
                     dataService.getLocation(scope.item.widgetSettings.id)
                         .then(function (data) {
                             scope.selectedLocation = data;

@@ -1,7 +1,7 @@
 {
-  "name": "angular-app",
+  "name": "PluralsightCourse",
   "version": "1.0.0",
-  "description": "Is to learn angular more deeply",
+  "description": "This app is to learn angular",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,19 +10,18 @@
     "type": "git",
     "url": "git+https://github.com/eliasjsp/learn-angular.git"
   },
-  "keywords": [
-    "angular"
-  ],
-  "author": "Elias Pinheiro",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/eliasjsp/learn-angular/issues"
   },
   "homepage": "https://github.com/eliasjsp/learn-angular#readme",
-  "dependencies" : {
-	"angular" : "1.5.7",
-	"font-awesome" : "4.6.3",
-	"jquery" : "3.0.0",
-	"bootstrap" : "3.3.6"
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-angular-filesort": "1.1.1",
+    "gulp-angular-templatecache": "2.0.0",
+    "gulp-concat": "2.6.0",
+    "gulp-strip-line": "0.0.1"
   }
 }

@@ -19,6 +19,10 @@ angular.module("psFramework").controller("psFrameworkController",
 
             $scope.$on('ps-menu-orientation-changed-event', function (evt, data) {
                 $scope.isMenuVertical = data.isMenuVertical;
+                //usase timeout porque esta no meio de digest cicle, nao se pode fazer appply, por isso precisa de acontecer depois do ciclo acabar.
+                $timeout(function () {
+                    $($window).trigger('resize');
+                });
             });
 
             $($window).on('resize.psFramework', function () {
@@ -41,7 +45,7 @@ angular.module("psFramework").controller("psFrameworkController",
             $scope.menuButtonClicked = function () {
                 $scope.isMenuVisible = !$scope.isMenuVisible;
                 broadcastMenuState();
-                //$scope.$apply();
+                $timeout(function () {$scope.$apply();},0);
             };
             
             var broadcastMenuState = function () {
